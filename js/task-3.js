@@ -1,3 +1,11 @@
+// Стрілочна функція для сортування користувачів за спаданням кількості друзів
+const sortByDescendingFriendCount = (users) => {
+  // Використовуємо метод toSorted() для створення нового відсортованого масиву
+  return users.toSorted((a, b) => {
+    return b.friends.length - a.friends.length;
+  });
+};
+
 // Викликаємо функцію для сортування користувачів за спаданням кількості друзів
 console.log(
   sortByDescendingFriendCount([
@@ -39,6 +47,7 @@ console.log(
   ])
 );
 
+// Очікуваний результат:
 // [
 //   {
 //     name: "Ross Vazquez",
